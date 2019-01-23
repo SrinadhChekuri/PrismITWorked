@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Didb"/>
+	<classpathentry kind="src" path="jdk1.8.0_191"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/cheku/Drivers/mysql-connector-java-8.0.14.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
