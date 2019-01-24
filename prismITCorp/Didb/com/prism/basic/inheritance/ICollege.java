@@ -1,12 +1,29 @@
 package com.prism.basic.inheritance;
 
 public class ICollege {
-	//public 
-
-
-
-
-
-public static void main(String[] args) {
-	System.out.println("hello world");
-}}
+	//declare the common methods for all students
+	private String collegeName="Campbellsville University";
+	private String location="Jacksonville, Florida";
+	private String address="1-2-3-4 bolivard";
+	
+	//declaring the getters and setters
+	public String getCollegeName() {
+		return collegeName;
+	}
+	public void setCollegeName(String collegeName) {
+		this.collegeName = collegeName;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+}
