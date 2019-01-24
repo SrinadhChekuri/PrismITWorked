@@ -6,6 +6,7 @@ public class ICollege {
 	private String location="Jacksonville, Florida";
 	private String address="1-2-3-4 bolivard";
 	
+	
 	//declaring the getters and setters
 	public String getCollegeName() {
 		return collegeName;
