@@ -3,54 +3,48 @@
  */
 package com.prismitcorp.assignments.array;
 
+import java.util.Arrays;
+
 /**
  * @author cheku
  *
  */
 public class QuickSort {
 
-	/**
-	 * @param args
-	 */
-	//taking  methos named quickSort and initiated variables array,start,end
-	public static void quickSort(int[] array, int start, int end) {
-		//provided the array start and end index
-		//quickSort(array,start,end);
-		//if start less than end move the elements in array to left side of pivot
-		int pindex=partition(array,start,end);
-		if(start<end) {
-			
-			//sorting towards the left side
-			quickSort(array,start,pindex-1);
-		}
-		if(start>end) {
-			//sorting towards right side
-			quickSort(array,pindex+1,end);
-		}
-		}
-	private static int partition(int[] array, int start, int end) {
-		
-		int pivot=array[end];
-		int pindex=array[start];
-		int temp=0;
-		for(int value=start;value<end;value++) {
-			if(array[value]<array[pivot]) {
-				swap(array[value],array[pindex]);
-				pindex++;
-				
-			}
-		}
-		swap(array[pivot],array[end]);
-		return pindex;
+	  public static void main(String[] args) {
+	        int[] arr = {4, 5, 1, 2, 3, 3};
+	        quickSort(arr, 0, arr.length-1);
+	        System.out.println(Arrays.toString(arr));
+	    }
+	 
+	    public static void quickSort(int[] arr, int start, int end){
+	 
+	        int partition = partition(arr, start, end);
+	 
+	        if(partition-1>start) {
+	            quickSort(arr, start, partition - 1);
+	        }
+	        if(partition+1<end) {
+	            quickSort(arr, partition + 1, end);
+	        }
+	    }
+	 
+	    public static int partition(int[] arr, int start, int end){
+	        int pivot = arr[end];
+	 
+	        for(int i=start; i<end; i++){
+	            if(arr[i]<pivot){
+	                int temp= arr[start];
+	                arr[start]=arr[i];
+	                arr[i]=temp;
+	                start++;
+	            }
+	        }
+	 
+	        int temp = arr[start];
+	        arr[start] = pivot;
+	        arr[end] = temp;
+	 
+	        return start;
+	    }
 	}
-	private static void swap(int i, int j) {
-		
-	}
-	public static void main(String[] args) {
-		int[] array= {20,4,15,53,44,18,10,26,3,2};
-		quickSort(array,0,10);
-		for(int digit=0;digit<10;digit++);
-
-	}
-
-}
